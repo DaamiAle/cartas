@@ -1,8 +1,33 @@
-
-#mensaje-principal{
-    font-size: calc(2rem + 5vw);
+body{
+    width: calc(100vw - overflow)!important;
+    max-width: calc(100vw - overflow)!important;
+    min-width: calc(100vw - overflow)!important;
+    background: #94D0D0;
+    font-size: 12px;
+}
+header{
+    padding: 0 10%;
+}
+.mensaje-principal{
+    font-size: calc(1rem + 4vw);
     font-style: italic;
     font-family: 'Great Vibes', cursive;
     text-align: center;
-    padding: 3% 0;
+}
+.titulo{
+    font-size: calc(2em + 1.5vw);
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2%;
+}
+.button:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.simple-text{
+    width: fit-content;
+    font-size: calc(1em + 1vw);
+    font-style: italic;
 }
