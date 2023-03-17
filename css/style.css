@@ -1,0 +1,8 @@
+
+#mensaje-principal{
+    font-size: calc(2rem + 5vw);
+    font-style: italic;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    padding: 3% 0;
+}
