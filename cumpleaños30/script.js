@@ -24,7 +24,7 @@ function backToFloat() {
 const balloonsContainer = document.querySelector('.balloons');
 const numBalloons = 30; // Número de globos que deseas generar
 // Array con las rutas de las imágenes de globos
-const balloonImages = ['balloon1.png', 'balloon2.png', 'balloon3.png'];
+const balloonImages = ['./assets/balloon1.png', './assets/balloon2.png', './assets/balloon3.png'];
 // Función para generar globos
 function createBalloon() {
     const balloon = document.createElement('img');
