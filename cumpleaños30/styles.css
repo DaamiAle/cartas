@@ -1,0 +1,101 @@
+/* Estilos básicos */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe5ec;
+    text-align: center;
+}
+
+.container {
+    padding: 0 5%;
+}
+
+.title {
+    font-size: 3em;
+    color: #ff6f91;
+    margin-bottom: 10px;
+}
+
+.message {
+    font-size: 1.5em;
+    color: #ff9671;
+}
+
+/* Globos y su animación */
+.balloons {
+    position: relative;
+    height: 40vh;
+    width: 80vw;
+}
+
+/* Cada globo tendrá una posición y animación diferente */
+.balloon {
+    position: absolute;
+    bottom: 0;
+    width: 10vw;
+    cursor: pointer;
+}
+
+.balloon.float {
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Animación de flotación básica */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animación para cuando el globo sube fuera de la pantalla al hacer clic */
+
+@keyframes flyAway {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-150vh); /* Mueve el globo fuera de la pantalla hacia arriba */
+        opacity: 0;
+    }
+}
+
+/* Clase para animar los globos cuando se hace clic */
+.balloon.pop {
+    animation: flyAway 2s forwards; /* La animación de volar que dura 2 segundos */
+    animation-play-state: running; /* Ejecutar inmediatamente la animación de volar */
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5em;
+    }
+    .message {
+        font-size: 1.2em;
+    }
+    .balloon {
+        width: 20vw; /* Ajustamos el tamaño de los globos */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2em;
+    }
+    .message {
+        font-size: 1em;
+    }
+    .balloon {
+        width: 25vw; /* Ajustamos más el tamaño para pantallas pequeñas */
+    }
+    .footer-message {
+        font-size: 1em;
+    }
+}
